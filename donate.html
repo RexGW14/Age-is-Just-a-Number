@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="equality.css">
+        <link rel="icon" type="image/png" href="=%20ion.png">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=comic sans ms">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Age is Just a Number | Donate</title>
+        <style>
+            #space {
+                height:75px;
+            }
+            input[type=button] {
+                width:20%;
+                font-size:24px;
+                color:#789ddb;
+                padding:10px 30px;
+                border: 2px solid #789ddb;
+                background-color:#fed8f7;
+                margin:10px 30px;
+                border-radius:10px;
+                text-align:center;
+                transition:background 0.5s linear 0s;
+            }
+            #other {
+                width:15%;
+                font-size:24px;
+                color:#789ddb;
+                padding:10px 30px;
+                border: 2px solid #789ddb;
+                background-color:#fed8f7;
+                margin:10px 30px;
+                border-radius:10px;
+                text-align:center;
+                transition:background 0.5s linear 0s;
+            }
+            input[type=button]:hover, #other:hover {
+                background-color:#789ddb;
+                color:#fed8f7;
+                transition:background 0.5s linear 0s;
+            }
+            #other:focus {
+                border:3px solid #789ddb;
+	            border-radius:10px;
+	            outline: none;
+                color:#789ddb;
+                background-color:#fed8f7;
+                text-align:left;
+            }
+            input[type=button]:focus {
+                background-color:#789ddb;
+                color:#fed8f7;
+                outline:none;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <img src="./equality.png" height="40px" width="120px"/>
+            <a href="./donate.html" id="page">Donate Now</a>
+            <a href="./event.html">Youth Oppression</a>
+            <a href="./equality.html">Home</a>
+        </nav>
+        <div id="space"></div>
+        <main>
+            <h2>Donate Now</h2>
+            <script>
+                function changeOther(value) {
+                    if(value == "Other") {
+                        document.getElementById("other").value = " ";
+                        document.getElementById("other").type = "number";
+                    }
+                }
+                const checkObj = [
+                    {
+                        "one"  : false,
+                        "month": false,
+                        check(id) {
+                            this[id] = true;
+                            document.getElementById(id).color = "#fed8f7";
+                            document.getElementById(id).background.color = "789ddb";
+                            document.getElementById(id).outline = "none";
+                        }
+                    }
+                ];
+            </script>
+            <section class="emp3">
+                <form id="donate" name="form" action="" method="POST">
+                    <input type="button" name="one" id="one" value="One Time" required>
+                    <input type="button" name="month" id="month" value="Monthy" required>
+                    <br/>
+                    <br/>
+                    <hr/>
+                    <br/>
+                    <br/>
+                    <h3>Select Amount</h3>
+                    <input type="button" name="25" id="25" value="25" required>
+                    <input type="button" name="50" id="50" value="50" required>
+                    <input type="button" name="100" id="100" value="100" required>
+                    <input type="button" name="250" id="250" value="250" required>
+                    <input type="button" name="500" id="500" value="500" required>
+                    <input 
+                    name="other" 
+                    id="other" 
+                    value="Other"  
+                    onfocus="changeOther(this.value)" 
+                    onblur="changeOther(this.value)"
+                    >
+                    <br/>
+                    <br/>
+                    <hr/>
+                    <br/>
+                    <br/>
+                    <h3>Payment Method</h3>
+                    <input type="button" name="credit" id="credit" value="Credit" required>
+                    <input type="button" name="paypal" id="paypal" value="PayPal" required>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <h3>Contacts</h3>
+            <p><a href="mailto:2023wilgeoh@share.wilsonsd.org">2023wilgeoh@share.wilsonsd.org</a> 484-509-5881</p>
+            <p>by George Williams</p>
+        </footer>
+    </body>
+</html>
